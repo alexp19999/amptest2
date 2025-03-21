@@ -27,8 +27,8 @@ export default function App() {
 
   function createTodo() {
     client.models.Todo.create({
-      content: window.prompt("firstName"),
-      contentTwo: window.prompt("lastName"),
+      firstName: window.prompt("firstName"),
+      lastName: window.prompt("lastName"),
     });
   }
 
@@ -38,9 +38,8 @@ export default function App() {
       <button onClick={createTodo}>+ new</button>
       <ul>
         {todos.map((todo) => (
-          <li key={todo.id}>{todo.content}</li>
-          <li key={todo.id}>{todo.contentTwo}</li>
-
+          <li key={todo.id}>{todo.firstName}</li>
+          <li key={todo.id}>{todo.lastName}</li>
         ))}
       </ul>
       <div>
